@@ -1,0 +1,5 @@
+file(GLOB_RECURSE SRC *.cpp)
+add_library(lib1 STATIC ${SRC})
+
+set_target_properties(lib1 PROPERTIES INTERFACE_INCLUDE_DIRECTORIES
+  ${CMAKE_CURRENT_SOURCE_DIR})
